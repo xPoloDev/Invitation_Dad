@@ -1,105 +1,83 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Israil - Birthday Invitation</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Israil - Birthday Invitation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container" role="main">
-        <main class="main">
-        <div class="logo">
-            <div class="mark">TKA</div>
+  <div class="container">
+    <main class="main">
+      <div class="logo">
+        <div class="mark">TKA</div>
         <div>
-        <div class="small">You are invited</div>
-        <div style="font-weight:700;letter-spacing:0.2px">Israil's Birthday Party</div>
+          <div class="small">You are invited</div>
+          <div style="font-weight:700;letter-spacing:0.2px">Israil's Birthday Party</div>
         </div>
-    </div>
+      </div>
 
+      <h1>Israil Birthday Party!</h1>
+      <p class="lead">Join us for a warm celebration — music, food and memories. Dress: semi-formal. Bring your smiles ❤️</p>
 
-    <h1>Israil Birthday Party!</h1>
-    <p class="lead">Join us for a warm celebration to send Anel into married life — music, food and memories. Dress: semi-formal. Bring your smiles ❤️</p>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop" alt="Birthday celebration">
+      </div>
 
+      <div class="details">
+        <div class="card"><h3>Date</h3><p>November 29, 2025</p></div>
+        <div class="card"><h3>Time</h3><p>16:00</p></div>
+        <div class="card"><h3>Venue</h3><p>Sky Garden Banquet</p></div>
+      </div>
 
-    <div class="hero-photo" aria-hidden="true">
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=4d8d8b1b3b7b2a7e8f6b8b9c3e4f2a1a" alt="Anel portrait"/>
-    </div>
+      <div class="story">
+        <p><strong>About the evening:</strong> We'll gather to share stories, dance, and enjoy great food together. Family and friends are warmly welcome!</p>
+      </div>
 
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="guest 1"/>
+        <img src="https://images.unsplash.com/photo-1519340333755-5c08c6daaf64?q=80&w=800&auto=format&fit=crop" alt="guest 2"/>
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop" alt="guest 3"/>
+      </div>
 
-    <div class="details" aria-label="Event details">
-        <div class="card">
-            <h3>Date</h3>
-            <p>November 29, 2025</p>
-        </div>
-        <div class="card">
-            <h3>Time</h3>
-            <p>16:00</p>
-        </div>
-        <div class="card">
-            <h3>Venue</h3>
-            <p>LOCATION LATER</p>
-        </div>
-    </div>
-
-
-    <div class="story">
-        <p><strong>About the evening:</strong> We'll gather to share stories, wish Anel the happiest of futures, and celebrate with traditional songs and dancing. Parents, friends and family are warmly welcome.</p>
-    </div>
-
-
-    <div class="gallery" aria-hidden="true">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=efc9e5f3a4c6b1c8d9c2e5f6a7b8c9d0" alt="guest 1"/>
-        <img src="https://images.unsplash.com/photo-1519340333755-5c08c6daaf64?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c" alt="guest 2"/>
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=4d8d8b1b3b7b2a7e8f6b8b9c3e4f2a1a" alt="guest 3"/>
-    </div>
-
-
-    <div class="cta-row">
-        <button class="btn btn-primary" onclick="document.getElementById('rsvp-name').scrollIntoView({behavior:'smooth'})">RSVP Now</button>
-        <a class="btn btn-ghost" href="#map">View on map</a>
-    </div>
-
-
-        </main>
-
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#rsvp">RSVP Now</a>
+        <a class="btn btn-ghost" href="#map">View Map</a>
+      </div>
+    </main>
 
     <aside class="side">
-    <h4>Event information</h4>
-    <div class="info">
-    <div class="row">
-    <div class="icon">📅</div>
-    <div class="meta"><p>Saturday, Dec 20</p><small>Doors open at 18:30</small></div>
-    </div>
+      <h4>Event information</h4>
+      <div class="info">
+        <div class="row"><div class="icon">📅</div><div class="meta"><p>Saturday, Nov 29</p><small>Starts at 16:00</small></div></div>
+        <div class="row"><div class="icon">📍</div><div class="meta"><p>Sky Garden Banquet</p><small>123 Avenue — Almaty</small></div></div>
+        <div class="row"><div class="icon">🍽️</div><div class="meta"><p>Dinner & Music</p><small>Traditional + vegetarian menu</small></div></div>
+      </div>
 
+      <div id="map" class="map">
+        <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1200&auto=format&fit=crop" alt="Map placeholder">
+      </div>
 
-<div class="row">
-<div class="icon">📍</div>
-<div class="meta"><p>Sky Garden Banquet</p><small>123 Avenue — Almaty city</small></div>
-</div>
+      <div id="rsvp" class="rsvp">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label for="rsvp-name">Your name</label>
+          <input id="rsvp-name" name="name" type="text" placeholder="Full name" required />
 
+          <label for="rsvp-email">Email</label>
+          <input id="rsvp-email" name="email" type="email" placeholder="your@email.com" required />
 
-<div class="row">
-<div class="icon">🍽️</div>
-<div class="meta"><p>Reception & Dinner</p><small>Traditional menu + vegetarian options</small></div>
-</div>
-</div>
+          <label for="rsvp-message">Message (optional)</label>
+          <input id="rsvp-message" name="message" type="text" placeholder="Your note" />
 
+          <button class="btn btn-primary" type="submit">Send RSVP</button>
+        </form>
+      </div>
+    </aside>
+  </div>
 
-<div id="map" class="map">
-<img src="https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e" alt="Map placeholder" style="width:100%;height:100%;object-fit:cover"/>
-</div>
-
-
-<div class="rsvp" aria-label="RSVP form">
-<form onsubmit="event.preventDefault(); handleRsvp();">
-<label for="rsvp-name">Your name</label>
-<input id="rsvp-name" name="name" type="text" placeholder="Full name" required />
-
-
-<label for="rsvp-email">Email</label>
+  <footer>© 2025 Israil's Birthday | Designed by Aiteke</footer>
+</body>
 </html>
+
