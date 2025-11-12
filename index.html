@@ -23,7 +23,7 @@
       <p class="lead">Join us for a warm celebration — music, food and memories. Dress: semi-formal. Bring your smiles ❤️</p>
 
       <div class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop" alt="Birthday celebration">
+        <img src="https://img.freepik.com/free-vector/skyline-with-shiny-circles_1406-7.jpg?semt=ais_hybrid&w=740&q=80" alt="Birthday celebration">
       </div>
 
       <div class="details">
@@ -34,12 +34,6 @@
 
       <div class="story">
         <p><strong>About the evening:</strong> We'll gather to share stories, dance, and enjoy great food together. Family and friends are warmly welcome!</p>
-      </div>
-
-      <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="guest 1"/>
-        <img src="https://images.unsplash.com/photo-1519340333755-5c08c6daaf64?q=80&w=800&auto=format&fit=crop" alt="guest 2"/>
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop" alt="guest 3"/>
       </div>
 
       <div class="cta-row">
@@ -61,23 +55,45 @@
       </div>
 
       <div id="rsvp" class="rsvp">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="rsvp-form" action="https://formspree.io/f/xyzlzgzw" method="POST">
           <label for="rsvp-name">Your name</label>
           <input id="rsvp-name" name="name" type="text" placeholder="Full name" required />
-
-          <label for="rsvp-email">Email</label>
-          <input id="rsvp-email" name="email" type="email" placeholder="your@email.com" required />
 
           <label for="rsvp-message">Message (optional)</label>
           <input id="rsvp-message" name="message" type="text" placeholder="Your note" />
 
           <button class="btn btn-primary" type="submit">Send RSVP</button>
         </form>
+        <p id="thank-you" style="display:none;color:#c9a33c;margin-top:10px;">Thanks! Your RSVP has been sent.</p>
       </div>
     </aside>
   </div>
 
   <footer>© 2025 Israil's Birthday | Designed by Aiteke</footer>
+
+  <script>
+    // Show thank-you message after form submission
+    const form = document.getElementById('rsvp-form');
+    const thank = document.getElementById('thank-you');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault(); // prevent default submission
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          thank.style.display = 'block';
+          form.reset();
+        } else {
+          alert('Oops! There was a problem submitting your RSVP.');
+        }
+      }).catch(error => {
+        alert('Oops! There was a problem submitting your RSVP.');
+      });
+    });
+  </script>
 </body>
 </html>
 
