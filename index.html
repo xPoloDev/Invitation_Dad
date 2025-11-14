@@ -1,3 +1,4 @@
+<!-- UPDATED HTML WITH FIXED DETAILS LAYOUT -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,9 +10,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* FIX: Details layout responsive + auto-fit text */
+    .details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      width: 100%;
+      margin: 30px 0;
+    }
+
+    .details .card {
+      background: rgba(255,255,255,0.1);
+      padding: 15px 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      text-align: center;
+      color: #fff;
+      word-wrap: break-word;
+    }
+
+    .details .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .details .card p {
+      font-size: 1rem;
+    }
+  </style>
 </head>
 
 <body>
+
+  <!-- START CELEBRATION OVERLAY -->
+  <div id="start-overlay">
+    <div class="start-box">
+      <h2>Приветсвуем</h2>
+      <p>Нажмите на кнопку чтобы начать праздник!</p>
+      <button id="start-button">Нажмите сюда</button>
+    </div>
+  </div>
+
   <!-- Starry background -->
   <div class="starry-bg">
     <span style="top:5%; left:10%; width:2px; height:2px; opacity:0.8; animation-delay:0s;"></span>
@@ -45,7 +86,6 @@
         </div>
       </div>
 
-      <!-- Image below title -->
       <div class="main-image">
         <img src="https://www.acaciacottages.co.uk/wp-content/uploads/kareoke-and-cocktails-a-1-735x590.jpg" alt="Birthday Celebration">
       </div>
@@ -53,16 +93,17 @@
       <p class="lead">Присоединяйтесь к теплому празднованию!</p>
       <p class="lead">Музыка и воспоминания. От вас улыбка и хорошее настроение!</p>
 
+      <!-- FIXED RESPONSIVE DETAILS SECTION -->
       <div class="details">
         <div class="card"><h3>Дата</h3><p>29 Ноября, 2025</p></div>
         <div class="card"><h3>Время</h3><p>19:00</p></div>
-        <div class="card"><h3>Место</h3><p>SAZ Restaurant&Karaoke</p></div>
+        <div class="card"><h3>Место</h3><p>SAZ Restaurant & Karaoke</p></div>
       </div>
 
       <div class="cta-row">
         <a class="btn btn-primary" href="#rsvp">Подтвердить участие</a>
         <a class="btn btn-ghost" href="#map">Посмотреть на карте</a>
-        <a class="btn btn-twogis" href="https://go.2gis.com/ncy9a">2GIS</a>
+        <a class="btn btn-twogis" href="https://go.2gis.com/OANNy">2GIS</a>
       </div>
     </main>
 
@@ -70,12 +111,12 @@
     <aside class="side">
       <h4>Event information</h4>
       <div class="info">
-        <div class="row"><div class="icon">📅</div><div class="meta"><p>Суббота, 29 ноября</p><small>Начало в 16:00</small></div></div>
+        <div class="row"><div class="icon">📅</div><div class="meta"><p>Суббота, 29 ноября</p><small>Начало в 19:00</small></div></div>
         <div class="row"><div class="icon">📍</div><div class="meta"><p>SAZ Restaurant&Karaoke</p><small>Улица Акмешит, 1 блок 6</small></div></div>
       </div>
 
       <div id="map" class="map">
-        <img src="https://scontent.cdninstagram.com/v/t51.75761-15/466124565_17852124198323886_4847752725172428681_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=MzQ5Njc4NjY2MjY5OTc5MzY4Mw%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExODB4MTQ3NS5zZHIuQzMifQ%3D%3D&_nc_ohc=4lRLl1WKeH8Q7kNvwEVWh8m&_nc_oc=AdnFsZLFPTKkNY_FQraiSWgY0uxsRVZQbmAQVNTieXHQmhmFe06Ejt5EG6ML1OL-_60&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=kA3Rgm_jSNayYAlwO91mmw&oh=00_Afg4K0mDnVYsHjSzT1DOoHqlX6sze3YXCQbXJJKMVUNA8w&oe=691CD47C" alt="Map placeholder">
+        <img src="https://i.ibb.co.com/20CGV3Gx/Screenshot-2025-11-14-170017.png" alt="Map placeholder">
       </div>
 
       <div id="rsvp" class="rsvp">
@@ -93,20 +134,20 @@
     </aside>
   </div>
 
-  <!-- Footer -->
   <footer>© 2025 Israil's Birthday | Designed by Aiteke</footer>
 
-  <!-- Background Music -->
-  <audio id="bg-music" loop autoplay>
+  <!-- Background music -->
+  <audio id="bg-music" loop>
     <source src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
   </audio>
+
+  <!-- Music Toggle -->
   <button id="music-toggle" style="position:fixed;top:20px;right:20px;z-index:999;padding:10px 15px;border:none;border-radius:8px;background:#f2c94c;color:#0a1930;cursor:pointer;font-weight:bold;">
     🔊 Music On
   </button>
 
   <script>
-    // RSVP form submission
+    // RSVP form
     const form = document.getElementById('rsvp-form');
     const thank = document.getElementById('thank-you');
 
@@ -120,27 +161,36 @@
         if (response.ok) {
           thank.style.display = 'block';
           form.reset();
-        } else {
-          alert('Oops! There was a problem submitting your RSVP.');
-        }
-      }).catch(error => {
-        alert('Oops! There was a problem submitting your RSVP.');
-      });
+        } else { alert('Error submitting RSVP.'); }
+      }).catch(err => alert('Error submitting RSVP.'));
     });
 
-    // Background music toggle
-    const music = document.getElementById('bg-music');
-    const toggle = document.getElementById('music-toggle');
+    // Start overlay (unmuted autoplay allowed AFTER click)
+    const startOverlay = document.getElementById("start-overlay");
+    const startButton = document.getElementById("start-button");
+    const bgMusic = document.getElementById("bg-music");
 
+    startButton.addEventListener("click", () => {
+      startOverlay.style.opacity = "0";
+      setTimeout(() => startOverlay.style.display = "none", 500);
+
+      bgMusic.muted = false;
+      bgMusic.volume = 1.0;
+      bgMusic.play();
+    });
+
+    // Music toggle
+    const toggle = document.getElementById('music-toggle');
     toggle.addEventListener('click', () => {
-      if (music.paused) {
-        music.play();
+      if (bgMusic.paused) {
+        bgMusic.play();
         toggle.textContent = "🔊 Music On";
       } else {
-        music.pause();
+        bgMusic.pause();
         toggle.textContent = "🔇 Music Off";
       }
     });
   </script>
+
 </body>
 </html>
